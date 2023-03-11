@@ -3,10 +3,10 @@ import { screen } from '@testing-library/react';
 import ParentCompoennt from './parentcomponent';
 
 describe("parent component testing suite", ()=>{
-    it("should basic render ", async ()=>{
+    it("testing basic render ", async ()=>{
         render(<ParentCompoennt/>)
-        let text = screen.getByText(/My Parent Components/i)
-        expect(text).toBeInTheDocument();
+        let element = screen.getByTestId("registration-form")
+        expect(element).toBeInTheDocument();
     })
     
     
